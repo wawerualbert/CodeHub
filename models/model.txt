@@ -1,0 +1,2 @@
+The model handles the data structure and schemas
+
