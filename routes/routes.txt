@@ -1,0 +1,2 @@
+The routes folder communicates with the controller to handle the requests passed to it
+
