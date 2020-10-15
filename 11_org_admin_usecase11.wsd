@@ -1,0 +1,20 @@
+@startuml OrgAdmin Update Profile
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor OrgAdmin
+
+rectangle usecase11{
+  OrgAdmin --> (OrgAdmin update profile)
+  (OrgAdmin update profile) .> (OrgAdmin login)
+  (OrgAdmin login) --> (Login successful)  
+  (Login successful) .> (OrgAdmin username\nOrgAdmin photo)
+  (OrgAdmin username\nOrgAdmin photo) --> (Profile updated)
+  (OrgAdmin login) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Profile not updated)  
+  (OrgAdmin update profile)
+}
+
+@enduml

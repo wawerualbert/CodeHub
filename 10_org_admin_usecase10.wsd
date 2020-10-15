@@ -1,0 +1,22 @@
+@startuml OrgAdmin First Time Login
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor OrgAdmin
+
+rectangle usecase10{
+  OrgAdmin .> (OrgAdmin first time login)
+  (OrgAdmin first time login) .> (OrgAdmin user name\nOrgAdmin email\nOrgAdmin temporary password)
+  (OrgAdmin user name\nOrgAdmin email\nOrgAdmin temporary password) .> (Login successful)
+  (Login successful) .> (OrgAdmin change password)
+  (OrgAdmin change password) .> (OrgAdmin enter new password) 
+  (OrgAdmin enter new password) --> (New password created)    
+  (OrgAdmin user name\nOrgAdmin email\nOrgAdmin temporary password) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Password not changed)
+  (Password not changed) --> (Password not created)
+  (OrgAdmin first time login) 
+}
+
+@enduml

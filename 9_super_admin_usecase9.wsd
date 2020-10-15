@@ -5,17 +5,15 @@ left to right direction
 skinparam packageStyle rectangle
 
 actor SuperAdmin
-actor OrgAdmin
 
 rectangle usecase9{
-  SuperAdmin-- (Delete OrgAdmin)
-  (Delete OrgAdmin) .> (SuperAdmin login) : authentication (email, password)
-  (SuperAdmin login) .> (Login successful) : authentication successful
-  (Login successful) .> (OrgAdmin name\nOrgAdmin email\nOrgAdmin temporary password\nOrgAdmin phone number\nOrgAdmin organization) : authorization
-  (OrgAdmin name\nOrgAdmin email\nOrgAdmin temporary password\nOrgAdmin phone number\nOrgAdmin organization) .> (OrgAdmin deleted) : authorization 
-  (SuperAdmin login) .> (Login unsuccessful) : authentication failed
-  (Login unsuccessful) .> (OrgAdmin deleted)  
-  (Delete OrgAdmin)-- OrgAdmin
+  SuperAdmin -- (Delete OrgAdmin)
+  (Delete OrgAdmin) .> (SuperAdmin login)
+  (SuperAdmin login) --> (Login successful) 
+  (Login successful) .> (OrgAdmin deleted)
+  (SuperAdmin login) .> (Login unsuccessful) 
+  (Login unsuccessful) .> (OrgAdmin not deleted)  
+  (Delete OrgAdmin)
 }
 
 @enduml
