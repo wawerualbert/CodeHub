@@ -1,0 +1,13 @@
+@startumlWebAppArchitecture
+
+node "Client" {
+  [UI/UX Web Application Components] 
+  JSON <. [User Dashboards] 
+}
+
+node "Server" {
+[App Logic] -- JSON
+[Database]
+}
+
+@enduml
