@@ -1,4 +1,4 @@
-@startuml SuperAdmin Update Organization
+@startuml SuperAdmin Create Organization
 
 skinparam actorStyle awesome
 left to right direction
@@ -7,14 +7,14 @@ skinparam packageStyle rectangle
 actor SuperAdmin
 actor OrgAdmin
 rectangle usecase3 {
-  SuperAdmin-- (Update Organization)
-  (Update Organization) .> (SuperAdmin login) : authentication (email, password)
+  SuperAdmin-- (Create Organization)
+  (Create Organization) .> (SuperAdmin login) : authentication (email, password)
   (SuperAdmin login) .> (Login successful) : authentication successful
   (Login successful) .> (Org number\nOrg name\nOrg profile photo\nOrg colour scheme) : authorization
-  (Org number\nOrg name\nOrg profile photo\nOrg colour scheme) .> (Organization updated) : authorization 
+  (Org number\nOrg name\nOrg profile photo\nOrg colour scheme) .> (Organization created) : authorization 
   (SuperAdmin login) .> (Login unsuccessful) : authentication failed
-  (Login unsuccessful) .> (Organization not updated)  
-  (Update Organization)-- OrgAdmin
+  (Login unsuccessful) .> (Organization not created)  
+  (Create Organization)-- OrgAdmin
 }
 
 @enduml

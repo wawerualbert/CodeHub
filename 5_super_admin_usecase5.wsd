@@ -1,4 +1,4 @@
-@startuml SuperAdmin Disable Organization
+@startuml SuperAdmin Enable Organization
 
 skinparam actorStyle awesome
 left to right direction
@@ -7,13 +7,13 @@ skinparam packageStyle rectangle
 actor SuperAdmin
 actor OrgAdmin
 rectangle usecase5 {
-  SuperAdmin-- (Disable Organization)
-  (Disable Organization) .> (SuperAdmin login) : authentication (email, password)
+  SuperAdmin-- (Enable Organization)
+  (Enable Organization) .> (SuperAdmin login) : authentication (email, password)
   (SuperAdmin login) .> (Login successful) : authentication successful
-  (Login successful) .> (Organization disabled) : authorization  successful
+  (Login successful) .> (Organization enabled) : authorization  successful
   (SuperAdmin login) .> (Login unsuccessful) : authentication failed
-  (Login unsuccessful) .> (Organization not disabled)  
-  (Disable Organization)-- OrgAdmin
+  (Login unsuccessful) .> (Organization not enabled)  
+  (Enable Organization)-- OrgAdmin
 }
 
 @enduml
