@@ -11,41 +11,30 @@ SuperAdmin -> OrgAdmin:Disable Organization (UC5)
 SuperAdmin -> OrgAdmin:Create Organization Admin (UC6)
 SuperAdmin -> OrgAdmin:Update Organization Admin (UC7)
 
-OrgAdmin -> OrgAdmin:First Time Login (UC8)
+OrgAdmin -> OrgAdmin:OrgAdmin first time Login (UC8)
 OrgAdmin -> OrgAdmin:OrgAdmin update profile (UC9)
 OrgAdmin -> OrgAdmin:OrgAdmin update organization (UC10)
 
 OrgAdmin -> Supervisor:Create Supervisor (UC11)
+OrgAdmin -> Supervisor:Update Supervisor (UC12)
+OrgAdmin -> Supervisor:Delete Supervisor (UC13)
 
 
-OrgAdmin -> Manager:Create Manager (UC8)
-OrgAdmin -> User:Create User (UC9)
+OrgAdmin -> Manager:Create Manager (UC14)
+OrgAdmin -> Manager:Update Manager (UC15)
+OrgAdmin -> Manager:Delete Manager (UC16)
 
-SuperAdmin -> OrgAdmin:Create issue (UC10)
-SuperAdmin -> SuperAdmin:Create issue (UC5)
+OrgAdmin -> User:Create User (UC17)
+OrgAdmin -> User:Update User (UC18)
+OrgAdmin -> User:Delete User (UC19)
 
-OrgAdmin -> SuperAdmin:Create issue (UC6)
+Supervisor -> Supervisor:Supervisor first time login (UC20)
+Supervisor -> Supervisor:Supervisor update profile (UC21)
 
+Manager -> Manager:Manager first time login (UC22)
+Manager -> Manager:Manager update profile (UC23)
 
-
-OrgAdmin -> Supervisor:Create issue (UC10)
-OrgAdmin -> OrgAdmin:Create issue (UC11)
-
-participant "Supervisor" as Supervisor
-Supervisor -> OrgAdmin:Create issue (UC12)
-Supervisor -> Manager:Create issue (UC13)
-Supervisor -> Supervisor:Create issue (UC14)
-
-
-participant "Manager" as Manager
-Manager -> Supervisor:Create issue (UC15)
-Manager -> User:Create issue (UC16)
-Manager -> Manager:Create issue (UC17)
-
-
-participant "User" as User
-User -> Manager:Create issue (UC18)
-User -> User:Create issue (UC19)
-
+User -> User:User first time login (UC24)
+User -> User:Supervisor update profile (UC25)
 
 @enduml
