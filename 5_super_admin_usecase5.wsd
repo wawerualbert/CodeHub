@@ -1,4 +1,4 @@
-@startuml SuperAdmin Disnable Organization
+@startuml SuperAdmin Disable Organization
 
 skinparam actorStyle awesome
 left to right direction

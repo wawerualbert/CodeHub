@@ -8,7 +8,7 @@ SuperAdmin -> OrgAdmin:Update Organization (UC3)
 SuperAdmin -> OrgAdmin:Enable Organization (UC4)
 SuperAdmin -> OrgAdmin:Disable Organization (UC5)
 
-SuperAdmin -> OrgAdmin:Create Organization Admin (UC3)
+SuperAdmin -> OrgAdmin:Create Organization Admin (UC6)
 SuperAdmin -> OrgAdmin:Create issue (UC4)
 SuperAdmin -> SuperAdmin:Create issue (UC5)
 
