@@ -7,9 +7,9 @@ skinparam packageStyle rectangle
 actor SuperAdmin
 rectangle usecase1 {
   SuperAdmin -- (Create SuperAdmin)
-  (Create SuperAdmin) .> (SuperAdmin name\nSuperAdmin email\nSuperAdmin password) : authorization
-  (SuperAdmin name\nSuperAdmin email\nSuperAdmin password) .> (SuperAdmin created) : authorized
-  (SuperAdmin name\nSuperAdmin email\nSuperAdmin password) .> (SuperAdmin not created) : authorization failed
+  (Create SuperAdmin) .> (SuperAdmin name\nSuperAdmin email\nSuperAdmin password\nSuperAdmin phone number) : authorization
+  (SuperAdmin name\nSuperAdmin email\nSuperAdmin password\nSuperAdmin phone number) .> (SuperAdmin created) : authorized
+  (SuperAdmin name\nSuperAdmin email\nSuperAdmin password\nSuperAdmin phone number) .> (SuperAdmin not created) : authorization failed
   (Create SuperAdmin)-- SuperAdmin
 }
 

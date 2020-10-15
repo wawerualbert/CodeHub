@@ -4,8 +4,8 @@ participant "SuperAdmin" as SuperAdmin
 SuperAdmin -> SuperAdmin:Create SuperAdmin (UC1)
 SuperAdmin -> SuperAdmin:Update SuperAdmin (UC2)
 
-SuperAdmin -> OrgAdmin:Create Organization (UC2)
-SuperAdmin -> OrgAdmin:Update Organization (UC3)
+SuperAdmin -> OrgAdmin:Create Organization (UC3)
+SuperAdmin -> OrgAdmin:Update Organization (UC4)
 SuperAdmin -> OrgAdmin:Enable Organization (UC4)
 SuperAdmin -> OrgAdmin:Disable Organization (UC5)
 
