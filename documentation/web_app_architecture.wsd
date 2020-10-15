@@ -1,4 +1,4 @@
-@startumlWebAppArchitecture
+@startuml WebAppArchitecture
 
 node "Client" {
   [UI/UX Web Application Components] 

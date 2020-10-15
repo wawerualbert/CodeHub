@@ -1,0 +1,36 @@
+@startuml AllUseCases
+
+participant "SuperAdmin" as SuperAdmin
+SuperAdmin -> SuperAdmin:Create SuperAdmin (UC1)
+SuperAdmin -> OrgAdmin:Create Organization (UC2)
+SuperAdmin -> OrgAdmin:Create Organization Admin (UC3)
+SuperAdmin -> OrgAdmin:Create issue (UC4)
+SuperAdmin -> SuperAdmin:Create issue (UC5)
+
+OrgAdmin -> SuperAdmin:Create issue (UC6)
+
+OrgAdmin -> Supervisor:Create Supervisor (UC7)
+OrgAdmin -> Manager:Create Manager (UC8)
+OrgAdmin -> User:Create User (UC9)
+
+OrgAdmin -> Supervisor:Create issue (UC10)
+OrgAdmin -> OrgAdmin:Create issue (UC11)
+
+participant "Supervisor" as Supervisor
+Supervisor -> OrgAdmin:Create issue (UC12)
+Supervisor -> Manager:Create issue (UC13)
+Supervisor -> Supervisor:Create issue (UC14)
+
+
+participant "Manager" as Manager
+Manager -> Supervisor:Create issue (UC15)
+Manager -> User:Create issue (UC16)
+Manager -> Manager:Create issue (UC17)
+
+
+participant "User" as User
+User -> Manager:Create issue (UC18)
+User -> User:Create issue (UC19)
+
+
+@enduml
