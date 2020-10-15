@@ -6,7 +6,7 @@ skinparam packageStyle rectangle
 
 actor OrgAdmin
 
-rectangle usecase11{
+rectangle usecase9{
   OrgAdmin --> (OrgAdmin update profile)
   (OrgAdmin update profile) .> (OrgAdmin login)
   (OrgAdmin login) --> (Login successful)  

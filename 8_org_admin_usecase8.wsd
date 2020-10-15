@@ -6,7 +6,7 @@ skinparam packageStyle rectangle
 
 actor OrgAdmin
 
-rectangle usecase10{
+rectangle usecase8{
   OrgAdmin .> (OrgAdmin first time login)
   (OrgAdmin first time login) .> (OrgAdmin user name\nOrgAdmin email\nOrgAdmin temporary password)
   (OrgAdmin user name\nOrgAdmin email\nOrgAdmin temporary password) .> (Login successful)
