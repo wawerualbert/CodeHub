@@ -10,11 +10,10 @@ SuperAdmin -> OrgAdmin:Disable Organization (UC5)
 
 SuperAdmin -> OrgAdmin:Create Organization Admin (UC6)
 SuperAdmin -> OrgAdmin:Update Organization Admin (UC7)
-SuperAdmin -> OrgAdmin:Delete Organization Admin (UC8)
 
-OrgAdmin -> OrgAdmin:First Time Login (UC9)
-OrgAdmin -> OrgAdmin:OrgAdmin update profile (UC10)
-OrgAdmin -> OrgAdmin:OrgAdmin update organization (UC11)
+OrgAdmin -> OrgAdmin:First Time Login (UC8)
+OrgAdmin -> OrgAdmin:OrgAdmin update profile (UC9)
+OrgAdmin -> OrgAdmin:OrgAdmin update organization (UC10)
 
 SuperAdmin -> OrgAdmin:Create issue (UC10)
 SuperAdmin -> SuperAdmin:Create issue (UC5)
