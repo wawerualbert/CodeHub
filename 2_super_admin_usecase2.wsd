@@ -10,8 +10,8 @@ rectangle usecase2 {
   SuperAdmin-- (Create Organization)
   (Create Organization) .> (SuperAdmin login) : authentication (email, password)
   (SuperAdmin login) .> (Login successful) : authentication successful
-  (Login successful) .> (Org number\nOrg name\nOrg email\nOrg password) : authorization
-  (Org number\nOrg name\nOrg email\nOrg password) .> (Organization created) : authorization 
+  (Login successful) .> (Org number\nOrg name\nOrg profile photo\nOrg colour scheme) : authorization
+  ((Org number\nOrg name\Org profile photo\nOrg colour scheme) .> (Organization created) : authorization 
   (SuperAdmin login) .> (Login unsuccessful) : authentication failed
   (Login unsuccessful) .> (Organization not created)  
   (Create Organization)-- OrgAdmin
