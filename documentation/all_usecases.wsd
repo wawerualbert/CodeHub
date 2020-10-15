@@ -15,14 +15,18 @@ OrgAdmin -> OrgAdmin:First Time Login (UC8)
 OrgAdmin -> OrgAdmin:OrgAdmin update profile (UC9)
 OrgAdmin -> OrgAdmin:OrgAdmin update organization (UC10)
 
+OrgAdmin -> Supervisor:Create Supervisor (UC11)
+
+
+OrgAdmin -> Manager:Create Manager (UC8)
+OrgAdmin -> User:Create User (UC9)
+
 SuperAdmin -> OrgAdmin:Create issue (UC10)
 SuperAdmin -> SuperAdmin:Create issue (UC5)
 
 OrgAdmin -> SuperAdmin:Create issue (UC6)
 
-OrgAdmin -> Supervisor:Create Supervisor (UC7)
-OrgAdmin -> Manager:Create Manager (UC8)
-OrgAdmin -> User:Create User (UC9)
+
 
 OrgAdmin -> Supervisor:Create issue (UC10)
 OrgAdmin -> OrgAdmin:Create issue (UC11)
