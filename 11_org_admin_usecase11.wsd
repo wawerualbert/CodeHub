@@ -1,21 +1,21 @@
-@startuml OrgAdmin Create Supervisor
+@startuml OrgAdmin Create Manager
 
 skinparam actorStyle awesome
 left to right direction
 skinparam packageStyle rectangle
 
 actor OrgAdmin
-actor Supervisor
+actor Manager
 
 rectangle usecase11{
-  OrgAdmin-- (Create Supervisor)
-  (Create Supervisor) .> (OrgAdmin login) : authentication (email, password)
+  OrgAdmin-- (Create Manager)
+  (Create Manager) .> (OrgAdmin login) : authentication (email, password)
   (OrgAdmin login) .> (Login successful) : authentication successful
-  (Login successful) .> (Supervisor name\nSupervisor email\nSupervisor temporary password\nSupervisor phone number) : authorization
-  (Supervisor name\nSupervisor email\nSupervisor temporary password\nSupervisor phone number) .> (Supervisor created) : authorization 
+  (Login successful) .> (Manager name\nManager email\nManager temporary password\nManager phone number) : authorization
+  (Manager name\nManager email\nManager temporary password\nManager phone number) .> (Manager created) : authorization 
   (OrgAdmin login) .> (Login unsuccessful) : authentication failed
-  (Login unsuccessful) .> (Supervisor not created)  
-  (Create Supervisor)-- Supervisor
+  (Login unsuccessful) .> (Manager not created)  
+  (Create Manager)-- Manager
 }
 
 @enduml

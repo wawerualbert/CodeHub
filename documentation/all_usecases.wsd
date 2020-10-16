@@ -15,14 +15,13 @@ OrgAdmin -> OrgAdmin:OrgAdmin first time Login (UC8)
 OrgAdmin -> OrgAdmin:OrgAdmin update profile (UC9)
 OrgAdmin -> OrgAdmin:OrgAdmin update organization (UC10)
 
-OrgAdmin -> Supervisor:Create Supervisor (UC11)
-OrgAdmin -> Supervisor:Update Supervisor (UC12)
-OrgAdmin -> Supervisor:Delete Supervisor (UC13)
+OrgAdmin -> Manager:Create Manager (UC11)
+OrgAdmin -> Manager:Update Manager (UC12)
+OrgAdmin -> Manager:Delete Manager (UC13)
 
-
-OrgAdmin -> Manager:Create Manager (UC14)
-OrgAdmin -> Manager:Update Manager (UC15)
-OrgAdmin -> Manager:Delete Manager (UC16)
+OrgAdmin -> Supervisor:Create Supervisor (UC14)
+OrgAdmin -> Supervisor:Update Supervisor (UC15)
+OrgAdmin -> Supervisor:Delete Supervisor (UC16)
 
 OrgAdmin -> User:Create User (UC17)
 OrgAdmin -> User:Update User (UC18)
