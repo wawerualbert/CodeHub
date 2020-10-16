@@ -1,0 +1,22 @@
+@startuml User First Time Login
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+
+rectangle usecase24{
+  User .> (User first time login)
+  (User first time login) .> (User name\nUser email\nUser temporary password)
+  (User name\nUser email\nUser temporary password) .> (Login successful)
+  (Login successful) .> (User change password)
+  (User change password) .> (User enter new password) 
+  (User enter new password) --> (New password created)    
+  (User name\nUser email\nUser temporary password) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Password not changed)
+  (Password not changed) --> (Password not created)
+  (User first time login) 
+}
+
+@enduml
