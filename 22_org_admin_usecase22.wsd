@@ -1,0 +1,22 @@
+@startuml Supervisor First Time Login
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor Supervisor
+
+rectangle usecase22{
+  Supervisor .> (Supervisor first time login)
+  (Supervisor first time login) .> (Supervisor user name\nSupervisor email\nSupervisor temporary password)
+  (Supervisor user name\nSupervisor email\nSupervisor temporary password) .> (Login successful)
+  (Login successful) .> (Supervisor change password)
+  (Supervisor change password) .> (Supervisor enter new password) 
+  (Supervisor enter new password) --> (New password created)    
+  (Supervisor user name\nSupervisor email\nSupervisor temporary password) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Password not changed)
+  (Password not changed) --> (Password not created)
+  (Supervisor first time login) 
+}
+
+@enduml
