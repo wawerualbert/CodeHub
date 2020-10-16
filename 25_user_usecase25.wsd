@@ -1,0 +1,20 @@
+@startuml User Update Profile
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+
+rectangle usecase25{
+  User --> (User update profile)
+  (User update profile) .> (User login)
+  (User login) --> (Login successful)  
+  (Login successful) .> (User name\nUser photo)
+  (User name\nUser photo) --> (Profile updated)
+  (User login) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Profile not updated)  
+  (User update profile)
+}
+
+@enduml
