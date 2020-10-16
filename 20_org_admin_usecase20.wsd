@@ -1,0 +1,22 @@
+@startuml Manager First Time Login
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor Manager
+
+rectangle usecase20{
+  Manager .> (Manager first time login)
+  (Manager first time login) .> (Manager user name\nManager email\nManager temporary password)
+  (Manager user name\nManager email\nManager temporary password) .> (Login successful)
+  (Login successful) .> (Manager change password)
+  (Manager change password) .> (Manager enter new password) 
+  (Manager enter new password) --> (New password created)    
+  (Manager user name\nManager email\nManager temporary password) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Password not changed)
+  (Password not changed) --> (Password not created)
+  (Manager first time login) 
+}
+
+@enduml

@@ -27,11 +27,11 @@ OrgAdmin -> User:Create User (UC17)
 OrgAdmin -> User:Update User (UC18)
 OrgAdmin -> User:Delete User (UC19)
 
-Supervisor -> Supervisor:Supervisor first time login (UC20)
-Supervisor -> Supervisor:Supervisor update profile (UC21)
+Manager -> Manager:Manager first time login (UC20)
+Manager -> Manager:Manager update profile (UC21)
 
-Manager -> Manager:Manager first time login (UC22)
-Manager -> Manager:Manager update profile (UC23)
+Supervisor -> Supervisor:Supervisor first time login (UC22)
+Supervisor -> Supervisor:Supervisor update profile (UC23)
 
 User -> User:User first time login (UC24)
 User -> User:Supervisor update profile (UC25)
