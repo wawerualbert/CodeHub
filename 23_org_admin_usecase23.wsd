@@ -1,0 +1,20 @@
+@startuml Supervisor Update Profile
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor Supervisor
+
+rectangle usecase23{
+  Supervisor --> (Supervisor update profile)
+  (Supervisor update profile) .> (Supervisor login)
+  (Supervisor login) --> (Login successful)  
+  (Login successful) .> (Supervisor username\nSupervisor photo)
+  (Supervisor username\nSupervisor photo) --> (Profile updated)
+  (Supervisor login) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Profile not updated)  
+  (Supervisor update profile)
+}
+
+@enduml
