@@ -1,19 +1,19 @@
-@startuml SuperAdmin Update Supervisor
+@startuml OrgAdmin Update Supervisor
 
 skinparam actorStyle awesome
 left to right direction
 skinparam packageStyle rectangle
 
-actor SuperAdmin
+actor OrgAdmin
 actor Supervisor
 
 rectangle usecase12{
-  SuperAdmin-- (Update Supervisor)
-  (Update Supervisor) .> (SuperAdmin login) : authentication (email, password)
-  (SuperAdmin login) .> (Login successful) : authentication successful
+  OrgAdmin-- (Update Supervisor)
+  (Update Supervisor) .> (OrgAdmin login) : authentication (email, password)
+  (OrgAdmin login) .> (Login successful) : authentication successful
   (Login successful) .> (Supervisor name\nSupervisor email\nSupervisor phone number) : authorization
   (Supervisor name\nSupervisor email\nSupervisor phone number) .> (Supervisor updated) : authorization 
-  (SuperAdmin login) .> (Login unsuccessful) : authentication failed
+  (OrgAdmin login) .> (Login unsuccessful) : authentication failed
   (Login unsuccessful) .> (Supervisor not updated)  
   (Update Supervisor)-- Supervisor
 }
