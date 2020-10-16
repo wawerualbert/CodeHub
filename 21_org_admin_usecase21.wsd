@@ -1,0 +1,20 @@
+@startuml Manager Update Profile
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor Manager
+
+rectangle usecase21{
+  Manager --> (Manager update profile)
+  (Manager update profile) .> (Manager login)
+  (Manager login) --> (Login successful)  
+  (Login successful) .> (Manager username\nManager photo)
+  (Manager username\nManager photo) --> (Profile updated)
+  (Manager login) .> (Login unsuccessful)
+  (Login unsuccessful) .> (Profile not updated)  
+  (Manager update profile)
+}
+
+@enduml
