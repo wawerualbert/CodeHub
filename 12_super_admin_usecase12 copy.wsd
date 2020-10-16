@@ -1,0 +1,20 @@
+@startuml SuperAdmin Delete Supervisor
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor SuperAdmin
+actor Supervisor
+
+rectangle usecase13{
+  SuperAdmin -- (Delete Supervisor)
+  (Delete Supervisor) .> (SuperAdmin login) : authentication (jwt)
+  (SuperAdmin login) .> (Login successful) : authentication successful
+  (Login successful) .> (Supervisor deleted)  
+  (SuperAdmin login) .> (Login unsuccessful) : authentication failed
+  (Login unsuccessful) .> (Supervisor not deleted)  
+  (Delete Supervisor) -- Supervisor
+}
+
+@enduml
