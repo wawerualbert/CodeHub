@@ -1,0 +1,21 @@
+@startuml Supervisor Resolve Issue
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor Supervisor
+actor Manager
+
+rectangle usecase6{
+  Supervisor -- (Resolve Issue)
+  (Resolve Issue) .> (Supervisor login) : authentication (email, password)
+  (Supervisor login) .> (Login successful) : authentication successful
+  (Login successful) .> (Issue number\nIssue message\nStatus) : authorization
+  (Issue number\nIssue message\nStatus) .> (Issue resolved) : authorization  
+  (Supervisor login) .> (Login unsuccessful) : authentication failed
+  (Login unsuccessful) .> (Issue pending)  
+  (Resolve Issue)-- Manager
+}
+
+@enduml
