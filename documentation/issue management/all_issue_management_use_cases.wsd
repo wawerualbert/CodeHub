@@ -5,7 +5,12 @@ SuperAdmin -> OrgAdmin:Create issue (UC1)
 OrgAdmin -> SuperAdmin:Resolve issue (UC2)
 
 OrgAdmin -> Manager:Create issue (UC3)
-Manager -> Supervisor:Create issue (UC4)
-Supervisor -> User:Create issue (UC5)
+Manager -> OrgAdmin:Resolve issue (UC4)
+
+Manager -> Supervisor:Create issue (UC5)
+Supervisor -> Manager:Resolve issue(UC6)
+
+Supervisor -> User:Create issue (UC7)
+User -> Supervisor:Resolve issue (UC8)
 
 @enduml
