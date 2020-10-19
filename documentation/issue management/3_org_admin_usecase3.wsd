@@ -1,0 +1,21 @@
+@startuml OrgAdmin Create Issue
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+actor OrgAdmin
+actor Manager
+
+rectangle usecase3{
+  OrgAdmin-- (Create Issue)
+  (Create Issue) .> (OrgAdmin login) : authentication (email, password)
+  (OrgAdmin login) .> (Login successful) : authentication successful
+  (Login successful) .> (Issue number\nIssue message\nSuperadmin location) : authorization
+  (Issue number\nIssue message\nSuperadmin location) .> (Issue created) : authorization 
+  (OrgAdmin login) .> (Login unsuccessful) : authentication failed
+  (Login unsuccessful) .> (Issue not created)  
+  (Create Issue)-- Manager
+}
+
+@enduml
