@@ -7,7 +7,7 @@ skinparam packageStyle rectangle
 actor SuperAdmin
 actor OrgAdmin
 
-rectangle usecase3 {
+rectangle usecase1 {
   SuperAdmin-- (Create Issue)
   (Create Issue) .> (SuperAdmin login) : authentication (email, password)
   (SuperAdmin login) .> (Login successful) : authentication successful
