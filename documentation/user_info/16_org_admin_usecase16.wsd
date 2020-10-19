@@ -5,16 +5,16 @@ left to right direction
 skinparam packageStyle rectangle
 
 actor OrgAdmin
-actor Manager
+actor Supervisor
 
 rectangle usecase16{
-  OrgAdmin -- (Delete Manager)
-  (Delete Manager) .> (OrgAdmin login) : authentication (jwt)
+  OrgAdmin -- (Delete Supervisor)
+  (Delete Supervisor) .> (OrgAdmin login) : authentication (jwt)
   (OrgAdmin login) .> (Login successful) : authentication successful
-  (Login successful) .> (Manager deleted)  
+  (Login successful) .> (Supervisor deleted)  
   (OrgAdmin login) .> (Login unsuccessful) : authentication failed
-  (Login unsuccessful) .> (Manager not deleted)  
-  (Delete Manager) -- Manager
+  (Login unsuccessful) .> (Supervisor not deleted)  
+  (Delete Supervisor) -- Supervisor
 }
 
 @enduml

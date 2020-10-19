@@ -1,4 +1,4 @@
-@startuml SuperAdmin Update Organization Admin
+@startuml OrgAdmin Update Organization Admin
 
 skinparam actorStyle awesome
 left to right direction

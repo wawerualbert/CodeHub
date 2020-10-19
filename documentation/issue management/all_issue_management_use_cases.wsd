@@ -1,0 +1,9 @@
+@startuml All Use Cases Issue Management
+
+participant "SuperAdmin" as SuperAdmin
+SuperAdmin -> OrgAdmin:Create issue (UC1)
+OrgAdmin -> Manager:Create issue (UC2)
+Manager -> Supervisor:Create issue (UC3)
+Supervisor -> User:Create issue (UC4)
+
+@enduml
