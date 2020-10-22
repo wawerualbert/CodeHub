@@ -1,0 +1,18 @@
+@startuml Create Issue
+
+skinparam actorStyle awesome
+left to right direction
+skinparam packageStyle rectangle
+
+rectangle usecase1{
+  (Create Issue)
+  (Create Issue) .> (User login) : authentication (email, password)
+  (User login) .> (Login successful) : authentication successful
+  (Login successful) .> (Issue number\nIssue message\nSuperadmin location) : authorization
+  (Issue number\nIssue message\nSuperadmin location) .> (Issue created) : authorization 
+  (User login) .> (Login unsuccessful) : authentication failed
+  (Login unsuccessful) .> (Issue not created)  
+  (Create Issue)
+}
+
+@enduml
